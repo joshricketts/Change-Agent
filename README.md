@@ -20,17 +20,19 @@ Massive thanks to Bart Reardon's SwiftDialog which is the tool handling all of t
 
 2. In the Mosyle version the user is presented with another window to inform them of the progress of checking user info, updating it, and verifying it was successfully updated. 
 
-<img width="815" alt="Screenshot 2022-12-21 at 12 13 17 PM" src="https://user-images.githubusercontent.com/105330539/208980082-36686551-6730-4aaf-9e93-2c0c51dce9a4.png">
+<img width="812" alt="Screenshot 2022-12-21 at 12 17 50 PM" src="https://user-images.githubusercontent.com/105330539/208980741-ca505ab7-64b1-477c-92bb-812c2d7f2b5e.png">
 
 
 <img width="813" alt="Screenshot 2022-12-21 at 12 21 51 PM" src="https://user-images.githubusercontent.com/105330539/208980560-b253a22c-5e37-4570-9f09-bb3867d793e2.png">
 
 
 Success:
+
 <img width="814" alt="Screenshot 2022-12-21 at 12 42 27 PM" src="https://user-images.githubusercontent.com/105330539/208980223-7824c02c-5c4b-4839-a49f-fe61d0b9e49c.png">
 
 Error:
-<img width="608" alt="Screenshot 2022-12-21 at 12 40 12 PM" src="https://user-images.githubusercontent.com/105330539/208980296-abd1959e-a0ac-4ac9-b6ff-4b9db6fc0581.png">
+
+<img width="816" alt="Screenshot 2022-12-21 at 12 22 47 PM" src="https://user-images.githubusercontent.com/105330539/208980809-ebb8319e-1c43-4e52-a2be-7c98ae1b8f06.png">
 
 
 3. The user is presented with a second window informing them that they will need to restart to complete the process with a buffer timer to allow them time to save any work. 
