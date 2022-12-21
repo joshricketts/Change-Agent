@@ -7,11 +7,10 @@ version=1.0
 date=$(date '+%m/%d/%Y')
 logfile="/var/tmp/namechange.log"
 
-token="MOSYLE-API-TOKEN-HERE"
-uname="mosyle_email@here.com"
-pword="Your-Mosyle-Admin-P4ssW0rd"
+token="a90cd41222d1c54a585548cdad8a28129642510daac594d81081c051d66524c5"
+uname="techadmin@secondbaptistschool.org"
+pword="Overeater-Shining-Overbuilt-Quantum-11"
 base64=$(echo "$uname":"$pword" | base64)
-supportURL="https://URL_to_your_ticket_portal.com"
 
 json="/var/tmp/userslist.json"
 prettyjson="/var/tmp/prettyuserslist.json"
@@ -27,7 +26,7 @@ message2="Please wait while we pull your information..."
 title3="Update Name Locally"
 message3="To complete this process you must click **Restart** below.  \n\n_Please save all of your work now._  \n\nIf no action is taken this process will automatically continue in 5 minutes."
 
-server_success="This username change script ran successfully on $date."
+server_success="This computer name change script ran successfully on $date."
 
 # Setting variables to detect whether Installomator and SwiftDialog are currently installed or not.
 installomator="/usr/local/Installomator/Installomator.sh"
@@ -44,7 +43,7 @@ dialogCMD1="$dialogApp --title \"$title1\" \
     --commandfile \"$dialog_command_file\" \
     --moveable \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"$supportURL\" \
+    --infobuttonaction \"https://sbs.myportallogin.com\" \
     --button1text \"Continue...\" \
     --button2text \"Cancel\" \
     "
@@ -57,7 +56,7 @@ dialogCMD2="$dialogApp --title \"$title2\" \
     --commandfile \"$dialog_command_file\" \
     --moveable \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"$supportURL\" \
+    --infobuttonaction \"https://sbs.myportallogin.com\" \
     --button1text \"Close\" \
     --button1disabled \
     "
@@ -71,7 +70,7 @@ dialogCMD3="$dialogApp --title \"$title3\" \
     --small \
     --timer 300 \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"$supportURL\" \
+    --infobuttonaction \"https://sbs.myportallogin.com\" \
     --button1text \"Restart\" \
     "
 
@@ -84,6 +83,16 @@ function refresh_dialog_command_file(){
     rm "$dialog_command_file"
     touch "$dialog_command_file"
 }
+
+function refresh_user_info_logs(){
+    rm "$logfile"
+    touch "$logfile"
+    rm "$userinfo1"
+    touch "$userinfo1"
+    rm "$userinfo2"
+    touch "$userinfo2"
+}
+
 
 # Execute a SwiftDialog command.
 function dialog_command(){
@@ -204,9 +213,11 @@ dialogCheck
 # -----------------------------------------------------------------------------------
 
 refresh_dialog_command_file
+refresh_user_info_logs
 
 /bin/echo $dialogCMD1
-eval "$dialogCMD1" > "$logfile"; return_code=$?
+eval "$dialogCMD1" > "$logfile"
+return_code=$?
 echo $return_code
 sleep 0.1
 
@@ -304,7 +315,7 @@ EOF
 
 dialog_command "progress: 3"
 dialog_command "progresstext: Account details found..."
-dialog_command "message: Prior account ID is **$oldUser**.  \n\nNew account is ID **$newUser**.  \n\nNew email address is **$newEmail**.  \n\nAccount type is **$type**.  \n\nLocation is **$location**."
+dialog_command "message: Prior account ID is **$oldUser**.  \n\nNew account ID is **$newUser**.  \n\nNew email address is **$newEmail**.  \n\nAccount type is **$type**.  \n\nLocation is **$location**."
 sleep 1
 
 # -----------------------------------------------------------------------------------
