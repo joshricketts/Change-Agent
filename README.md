@@ -11,6 +11,8 @@ Massive thanks to Bart Reardon's SwiftDialog which is the tool handling all of t
 
 **RenameUserMosyle.sh** will handle verifying user data in your Mosyle tenant via API calls to create a new user with the matching information, as well as handle the local username/home directory change. This may not be NEEDED in every case, but it does prevent any issues on devices running Mosyle Auth where the email address entered needs to match what's on file. 
 
+I've done my besst to keep the majority of any thing that you'd want to edit at the top of the scripts. If you want to know more about how to customize the windows that come up then check out the amazing Wiki for SwiftDialog: https://github.com/bartreardon/swiftDialog/wiki
+
 # User-Interface
 
 1. The user is presented with a window with textboxes asking for the relevant information
