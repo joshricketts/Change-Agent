@@ -37,7 +37,7 @@ Error:
 <img width="816" alt="Screenshot 2022-12-21 at 12 22 47 PM" src="https://user-images.githubusercontent.com/105330539/208980809-ebb8319e-1c43-4e52-a2be-7c98ae1b8f06.png">
 
 
-3. The user is presented with a second window informing them that they will need to restart to complete the process with a buffer timer to allow them time to save any work. 
+3. The user is presented with another window informing them that they will need to restart to complete the process with a buffer timer to allow them time to save any work. 
 
 <img width="608" alt="Screenshot 2022-12-21 at 12 40 12 PM" src="https://user-images.githubusercontent.com/105330539/208980354-ea5ae96a-b15a-4963-a559-141a919d55c1.png">
 
