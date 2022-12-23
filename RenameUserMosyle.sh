@@ -7,9 +7,9 @@ version=1.0
 date=$(date '+%m/%d/%Y')
 logfile="/var/tmp/namechange.log"
 
-token="a90cd41222d1c54a585548cdad8a28129642510daac594d81081c051d66524c5"
-uname="techadmin@secondbaptistschool.org"
-pword="Overeater-Shining-Overbuilt-Quantum-11"
+token="YourAITtoken"
+uname="admin_email@address.com"
+pword="Admin-P4ssw0rd"
 base64=$(echo "$uname":"$pword" | base64)
 
 json="/var/tmp/userslist.json"
