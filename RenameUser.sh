@@ -7,6 +7,8 @@ version=1.0
 logfile="/var/tmp/namechange.log"
 starttime=$(date +%s)
 
+ticketURL="https://url_to_your_ticket_portal.com"
+
 title1="Update Username"
 message1="To update your computer account's username please enter your **email address prefix** _(the part before @example.com)_ while **excluding** any special characters, capital letters, or spaces.  \n\n Enter your first and last name **including** a space between names in the **Full Name** field below:"
 
@@ -27,7 +29,7 @@ dialogCMD1="$dialogApp --title \"$title1\" \
     --moveable \
     --quitkey \"X\" \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"https://enable.myportallogin.com\" \
+    --infobuttonaction \"$ticketURL\" \
     --button1text \"Continue...\" \
     "
 
@@ -77,7 +79,7 @@ dialogCMD2="$dialogApp --title \"$title2\" \
     --button2text \"Cancel\" \
     --timer 300 \
     --infobuttontext \"Questions? Enter support a ticket\" \
-    --infobuttonaction \"https://enable.myportallogin.com\" \
+    --infobuttonaction \"$ticketURL\" \
     "
 
 refresh_dialog_command_file
