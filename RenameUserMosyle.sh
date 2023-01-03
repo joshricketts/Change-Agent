@@ -7,10 +7,11 @@ version=1.0
 date=$(date '+%m/%d/%Y')
 logfile="/var/tmp/namechange.log"
 
-token="YourAITtoken"
+token="YourITtoken"
 uname="admin_email@address.com"
 pword="Admin-P4ssw0rd"
 base64=$(echo "$uname":"$pword" | base64)
+ticketURL="https://url_to_your_ticketing_system.com"
 
 json="/var/tmp/userslist.json"
 prettyjson="/var/tmp/prettyuserslist.json"
@@ -43,7 +44,7 @@ dialogCMD1="$dialogApp --title \"$title1\" \
     --commandfile \"$dialog_command_file\" \
     --moveable \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"https://sbs.myportallogin.com\" \
+    --infobuttonaction \"$ticketURL\" \
     --button1text \"Continue...\" \
     --button2text \"Cancel\" \
     "
@@ -56,7 +57,7 @@ dialogCMD2="$dialogApp --title \"$title2\" \
     --commandfile \"$dialog_command_file\" \
     --moveable \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"https://sbs.myportallogin.com\" \
+    --infobuttonaction \"$ticketURL\" \
     --button1text \"Close\" \
     --button1disabled \
     "
@@ -70,7 +71,7 @@ dialogCMD3="$dialogApp --title \"$title3\" \
     --small \
     --timer 300 \
     --infobuttontext \"Questions? Enter a ticket\" \
-    --infobuttonaction \"https://sbs.myportallogin.com\" \
+    --infobuttonaction \"$ticketURL\" \
     --button1text \"Restart\" \
     "
 
